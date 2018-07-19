@@ -7,6 +7,14 @@ var	app 	= express();
 
 app.set('view engine', 'ejs');
 
+app.get('/', (req, res) => {
+	res.render('index');
+});
+
+app.get('/info', (req, res) => {
+	res.render('info');
+});
+
 app.listen(port, () => {
-	console.log(`The server is on port: ` +  port);
+	console.log(`The server is on port: ` + port);
 });
